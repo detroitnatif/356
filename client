@@ -116,7 +116,7 @@ class NumberGuessingGameClient:
                     if mtype == "AYE":
                         low_val = msg.get("min")
                         high_val = msg.get("max")
-                        if not isinstance(low_val, int) or not isinstance(high_val, int):
+                        if type(low_val) is not int or type(high_val) is not int:
                             sys.exit(1)
                         break
                     elif mtype == "BYE":
