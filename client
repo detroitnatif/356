@@ -7,6 +7,8 @@ import argparse
 from typing import List, Dict, Any
 from dataclasses import dataclass
 
+
+# ARGUMENT STRUCT
 @dataclass
 class ParsedArguments:
     use_tls: bool
@@ -14,6 +16,7 @@ class ParsedArguments:
     hostname: str
     netid: str
 
+# ARGUMENT PARSER CLASS
 class ArgumentParserCustom:
     def __init__(self, args: List[str]):
         self.args = args
@@ -44,6 +47,7 @@ class ArgumentParserCustom:
     def get_args(self) -> ParsedArguments:
         return self.parsed_args
 
+# CLIENT CLASS
 class NumberGuessingGameClient:
     def __init__(self, args: List[str]):
         self.args = ArgumentParserCustom(args).get_args()
