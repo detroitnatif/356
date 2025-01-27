@@ -130,7 +130,7 @@ class NumberGuessingGameClient:
                         return
                 if low_val is not None and high_val is not None:
                     break 
-
+            # BINARY SEARCH
             lo, hi = low_val, high_val
             attempt = 1  
             while lo <= hi:
