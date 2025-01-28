@@ -119,7 +119,7 @@ class NumberGuessingGameClient:
 
                 parsed_messages = []
                 for line in messages:
-                    if not line.strip():
+                    if not line.sdt():
                         continue  
                     try:
                         msg = json.loads(line)
@@ -199,7 +199,7 @@ class NumberGuessingGameClient:
 
                     parsed_messages = []
                     for line in messages:
-                        if not line.strip():
+                        if not line.sdt():
                             continue  
                         try:
                             msg = json.loads(line)
